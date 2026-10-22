@@ -1,5 +1,9 @@
 import sys
 import redpitaya_scpi as scpi
+import time
+import redpitaya_scpi as scpi
+import matplotlib.pyplot as plot
+from collections import deque
 
 IP = "10.209.3.92"
 rp = scpi.scpi(IP)
@@ -18,4 +22,3 @@ rp.tx_txt('SOUR1:VOLT ' + str(ampl))
 rp.tx_txt('OUTPUT1:STATE ON')
 rp.tx_txt('SOUR1:TRig:INT')
 
-rp.close()
